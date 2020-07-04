@@ -1,0 +1,154 @@
+<html>
+<body>
+	<h1 class="h1">TIME CALCULATOR</h1>
+	<link rel="stylesheet" href="calci.css" >
+	<p><input class="text" type="text" id="text2"></input></p>
+	<p class="button">
+		<button class="bc" type="button" id="02">0</button>
+		<button class="bc"type="button" id="12">1</button>
+		<button class="bc"type="button" id="22">2</button>
+		<button class="bc"type="button" id="32">3</button>
+		<button class="bc"type="button" id="42">4</button>
+		<button class="bc"type="button" id="52">5</button>
+		<button class="bc"type="button" id="62">6</button>
+		<button class="bc"type="button" id="72">7</button>
+		<button class="bc"type="button" id="82">8</button>
+	</p>
+	<p class="button">
+		<select id="time conver">
+			<option><button class="bc1" type="button" id="day">day</button></option>
+			<option><button class="bc1" type="button" id="hour">hour</button></option>
+			<option><button class="bc1" type="button" id="min">min</button></option>
+			<option><button class="bc1" type="button" id="sec">sec</button></option>
+			<option><button class="bc1" type="button" id="week">week</button>
+			</option>
+		</select>
+		<select id="time convers">
+			<option><button class="bc1" type="button" id="day1">day</button></option>
+			<option><button class="bc1" type="button" id="hour1">hour</button></option>
+			<option><button class="bc1" type="button" id="min1">min</button></option>
+			<option><button class="bc1" type="button" id="sec1">sec</button></option>
+			<option><button class="bc1" type="button" id="week1">week</button>
+			</option>
+		</select>
+	</p>
+	<p class="button">
+		<button class="fun"type="button" id="era">clear1</button>
+		<button class="fun"type="button" id="=2">=</button>
+	</p>
+	<script>
+		var a,b,sv,t,t1,sv1;
+		document.getElementById("02").addEventListener("click",function(){
+			var d=document.getElementById("text2").value;
+			document.getElementById("text2").value=d.concat("0");
+		});
+		document.getElementById("12").addEventListener("click",function(){
+			var d=document.getElementById("text2").value;
+			document.getElementById("text2").value=d.concat("1");
+		});
+		document.getElementById("22").addEventListener("click",function(){
+			var d=document.getElementById("text2").value;
+			document.getElementById("text2").value=d.concat("2");
+		});
+		document.getElementById("32").addEventListener("click",function(){
+			var d=document.getElementById("text2").value;
+			document.getElementById("text2").value=d.concat("3");
+		});
+		document.getElementById("42").addEventListener("click",function(){
+			var d=document.getElementById("text2").value;
+			document.getElementById("text2").value=d.concat("4");
+		});
+		document.getElementById("52").addEventListener("click",function(){
+			var d=document.getElementById("text2").value;
+			document.getElementById("text2").value=d.concat("5");
+		});
+		document.getElementById("62").addEventListener("click",function(){
+			var d=document.getElementById("text2").value;
+			document.getElementById("text2").value=d.concat("6");
+		});
+		document.getElementById("72").addEventListener("click",function(){
+			var d=document.getElementById("text2").value;
+			document.getElementById("text2").value=d.concat("7");
+		});
+		document.getElementById("82").addEventListener("click",function(){
+			var d=document.getElementById("text2").value;
+			document.getElementById("text2").value=d.concat("8");
+		});
+		document.getElementById("era").addEventListener("click",function(){
+			eraser();
+		});
+		
+		
+		document.getElementById("=2").addEventListener("click",function(){
+			var sel = document.getElementById("time conver");
+			sv1= sel.options[sel.selectedIndex].value;
+
+			a=parseInt(document.getElementById("text2").value);
+			eraser();
+
+			var sel = document.getElementById("time convers");
+			sv = sel.options[sel.selectedIndex].value;
+			(function(){
+				if(sv=='day')
+				{
+					t1=1;
+				}
+				else if(sv=='hour')
+				{
+
+					t1=2;
+				}
+				else if(sv=='min')
+				{
+					t1=3;
+				}
+				else
+				{
+					t1=4;
+				}
+			}());
+
+
+			if(t1==1)
+			{
+				if(sv1=='day')
+					document.getElementById("text2").value=a*24;
+				else if(sv1=='hour')
+					document.getElementById("text2").value=7*a;
+			}
+			else if(t1==2)
+			{
+				if(sv1=='min')
+					document.getElementById("text2").value=24*a;
+				else if(sv1=='sec')
+					document.getElementById("text2").value=7*24*a;
+				else if(sv1=='hour')
+					document.getElementById("text2").value=3600*a;
+				else if(sv1=='day')
+					document.getElementById("text2").value=a*24;
+			}
+			else if(t1==3)
+			{
+				if(sv1=='hour')
+					document.getElementById("text2").value=60*a;
+				else if(sv1=='min')
+					document.getElementById("text2").value=7*24*a*60;
+			}
+			else if(t1==4)
+			{
+				if(sv1=='day')
+					document.getElementById("text2").value=60*60*a;
+				else if(sv1=='hour')
+					document.getElementById("text2").value=60*a*60;
+				else if(sv1=='min')
+					document.getElementById(text2).value=60*60*a;
+			}
+		});
+		function eraser()
+		{
+			document.getElementById("text2").value="";
+		}
+
+	</script>
+</body>
+</html>

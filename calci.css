@@ -1,0 +1,96 @@
+.head
+{
+	text-align:center;
+	font-size:45px;
+	font-style: inherit;
+}
+.href
+{
+	font-size:35px;
+	text-align:center;
+	text-decoration: none;
+}
+.href1
+{
+text-orientation: right;	
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: lightblue;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.h2
+{
+	padding-bottom:  50px;
+}
+.h1
+{
+color: red;
+text-align: center;
+font-style: italic;
+}
+.text
+{
+	padding-top: 100px;
+	padding:20px;
+text-align: right;
+margin-left: 42%;
+margin-right: 58%;
+background-color: lightgray; 
+}
+.button
+{
+margin-left: 42%;	
+}
+.bc
+{
+  border-radius: 20px;
+	background-color: skyblue;
+}
+.bc1
+{
+  border-radius: 20px;
+	background-color:lightgreen ;
+}
+.bc2
+{
+   border-radius: 20px;
+  background-color: lightyellow;
+}
+.fun
+{
+  border-radius: 20px;
+background-color: pink;	
+}

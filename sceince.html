@@ -1,0 +1,352 @@
+<html>
+<body>
+<h1 class="h1">SCEINTIFIC CALCULATOR</h1>
+	<link rel="stylesheet" href="calci.css" >
+    <p><span id="content1"></span></p>
+    <span id="content2"></span>
+    <span id="content3"></span>
+    <span id="content4"></span>
+    <span id="content5"></span>
+    <p><span>
+
+    <input class="text" id="textbox" type="text">
+
+</span></p>
+<p class="button">
+<span><button class="bc" type="button" id="7" ><div class="tooltip">7<span class="tooltiptext">seven</span></div></button></span>
+<span><button class="bc" type="button" id="6"><div class="tooltip">6<span class="tooltiptext">six</span></div></button></span>
+<span><button class="bc" type="button" id="8"><div class="tooltip">8<span class="tooltiptext">eight</span></div></button></span>
+<span><button class="bc" type="button" id="0"><div class="tooltip">0<span class="tooltiptext">zero</span></div></button></span>
+<span><button class="bc" type="button" id="5" ><div class="tooltip">5<span class="tooltiptext">five</span></div></button></span>
+<span><button class="bc" type="button" id="4"><div class="tooltip">4<span class="tooltiptext">four</span></div></button></span>
+<span><button class="bc" type="button" id="3"><div class="tooltip">3<span class="tooltiptext">three</span></div></button></span>
+<span><button class="bc" type="button" id="2"><div class="tooltip">2<span class="tooltiptext">two</span></div></button></span>
+</p>
+<p class="button">
+<span><button class="bc1" type="button" id="/">/</button></span>    
+<span><button class="bc1" type="button" id="=">=</button></span>
+<span><button class="bc1" type="button" id="*">*</button></span>    
+<span><button class="bc1" type="button" id="-">-</button></span>
+<span><button class="bc1" type="button" id="+">+</button></span>
+<span><button class="bc1" type="button" id=".">.</button>
+<button class="bc1" type="button" id="log">log</button>
+</span>
+</p>
+<p class="button">
+<span><button class="fun" type="button" id="x^y">x^y</button></span>
+<span><button class="fun" type="button" id="10^x">10^x</button></span>
+<span><button class="fun" type="button" id="clear">c</button></span>
+<span><button class="fun" type="button" id="cube">cube</button></span>
+<span><button class="fun" type="button" id="Int">Int</button></span>
+<p class="button"><span><button class="bc2" type="button" id="pi">pi</button></span>
+<span><button class="bc2" type="button" id="sin">sin</button></span>
+<span><button class="bc2" type="button" id="cos">cos</button></span>
+<span><button class="bc2" type="button" id="tan">tan</button></span>
+<span><button class="bc2" type="button" id="exp">exp</button></span>
+<button class="bc2" type="button" id="pow">pow</button>
+</p>
+<p class="button">
+  <button class="bc2" type="button" id="fact">fact</button>
+</p>
+<h1 class="h1">UNIT CALCULATOR</h1>
+<p><span><input class="text" type="text" id="text1"></input></span></p>
+<p class="button">
+<span><button class="bc" type="button" id="71" ><div class="tooltip">7<span class="tooltiptext">seven</span></div></button></span>
+<span><button class="bc" type="button" id="61"><div class="tooltip">6<span class="tooltiptext">six</span></div></button></span>
+<span><button class="bc" type="button" id="81"><div class="tooltip">8<span class="tooltiptext">eight</span></div></button></span>
+<span><button class="bc" type="button" id="01"><div class="tooltip">0<span class="tooltiptext">zero</span></div></button></span>
+<span><button class="bc" type="button" id="51" ><div class="tooltip">5<span class="tooltiptext">five</span></div></button></span>
+<span><button class="bc" type="button" id="41"><div class="tooltip">4<span class="tooltiptext">four</span></div></button></span>
+<span><button class="bc" type="button" id="31"><div class="tooltip">3<span class="tooltiptext">three</span></div></button></span>
+<span><button class="bc" type="button" id="21"><div class="tooltip">2<span class="tooltiptext">two</span></div></button></span>
+</p>
+<p class="button">
+<span><button class="bc1" type="button" id="kel">kel</button></span>
+<button class="bc1" type="button" id="deg">deg</button>
+<button class="bc1" type="button" id="=1">=1</button>
+<button class="bc1" type="button" id="cl">cl</button>
+</p>
+<script>
+var a,b,op,c;
+document.getElementById("fact").addEventListener("click",function(){
+a=document.getElementById("textbox").value;
+op='fact';
+erase();
+});
+
+document.getElementById("pow").addEventListener("click",function(){
+a=document.getElementById("textbox").value;
+op='pow';
+erase();
+});
+document.getElementById("log").addEventListener("click",function(){
+a=parseInt(document.getElementById("textbox").value);
+op='log';
+erase();
+});
+document.getElementById("21").addEventListener("click", function() 
+{
+  var temp = document.getElementById("text1").value;
+  var setvalue ='2';
+  document.getElementById("text1").value = temp.concat(setvalue);
+});
+document.getElementById("31").addEventListener("click", function() 
+{
+  var temp = document.getElementById("text1").value;
+  var setvalue ='3';
+  document.getElementById("text1").value = temp.concat(setvalue);
+});
+document.getElementById("41").addEventListener("click", function() 
+{
+  var temp = document.getElementById("text1").value;
+  var setvalue ='4';
+  document.getElementById("text1").value = temp.concat(setvalue);
+});
+document.getElementById("51").addEventListener("click", function() 
+{
+  var temp = document.getElementById("text1").value;
+  var setvalue ='5';
+  document.getElementById("text1").value = temp.concat(setvalue);
+});
+document.getElementById("61").addEventListener("click", function() 
+{
+  var temp = document.getElementById("text1").value;
+  var setvalue ='6';
+  document.getElementById("text1").value = temp.concat(setvalue);
+});
+document.getElementById("71").addEventListener("click", function() 
+{
+  var temp = document.getElementById("text1").value;
+  var setvalue ='7';
+  document.getElementById("text1").value = temp.concat(setvalue);
+});
+
+document.getElementById("81").addEventListener("click", function() 
+{
+  var temp = document.getElementById("text1").value;
+  var setvalue ='8';
+  document.getElementById("text1").value = temp.concat(setvalue);
+});
+
+
+document.getElementById("01").addEventListener("click", function() 
+{
+  var temp = document.getElementById("text1").value;
+  var setvalue ='0';
+  document.getElementById("text1").value = temp.concat(setvalue);
+});
+document.getElementById("deg").addEventListener("click",function(){
+a=parseFloat(document.getElementById("text1").value);
+op='deg';
+erase1();
+});
+document.getElementById("kel").addEventListener("click",function(){
+a=parseFloat(document.getElementById("text1").value);
+op='kel';
+erase1();
+});
+document.getElementById("cl").addEventListener("click",function(){
+erase1();
+});
+document.getElementById("x^y").addEventListener("click",function(){
+a=document.getElementById("textbox").value;
+op='x^y';
+erase();
+});
+document.getElementById("10^x").addEventListener("click",function()
+{
+a=document.getElementById("textbox").value;
+op='10^x';
+});
+document.getElementById("exp").addEventListener("click",function()
+{
+a=document.getElementById("textbox").value;
+op='exp';
+});
+document.getElementById("cos").addEventListener("click",function()
+{
+a=document.getElementById("textbox").value;
+op='cos';
+});
+document.getElementById("sin").addEventListener("click",function()
+{
+a=document.getElementById("textbox").value;
+op='sin';
+});
+document.getElementById("pi").addEventListener("click",function()
+{
+document.getElementById("textbox").value=3.14;
+});
+document.getElementById(".").addEventListener("click",function()
+{
+	a=document.getElementById("textbox").value;
+document.getElementById("textbox").value=a.concat(".");
+});
+document.getElementById("Int").addEventListener("click",function()
+	{
+a=document.getElementById("textbox").value;
+op='int';
+	});
+document.getElementById("cube").addEventListener("click", function() 
+{
+ a=document.getElementById("textbox").value;
+ op='cube';
+});
+document.getElementById("clear").addEventListener("click", function() 
+{
+  erase();
+});
+document.getElementById("2").addEventListener("click", function() 
+{
+  var temp = document.getElementById("textbox").value;
+  var setvalue ='2';
+  document.getElementById("textbox").value = temp.concat(setvalue);
+});
+document.getElementById("3").addEventListener("click", function() 
+{
+  var temp = document.getElementById("textbox").value;
+  var setvalue ='3';
+  document.getElementById("textbox").value = temp.concat(setvalue);
+});
+document.getElementById("4").addEventListener("click", function() 
+{
+  var temp = document.getElementById("textbox").value;
+  var setvalue ='4';
+  document.getElementById("textbox").value = temp.concat(setvalue);
+});
+document.getElementById("5").addEventListener("click", function() 
+{
+  var temp = document.getElementById("textbox").value;
+  var setvalue ='5';
+  document.getElementById("textbox").value = temp.concat(setvalue);
+});
+document.getElementById("6").addEventListener("click", function() 
+{
+  var temp = document.getElementById("textbox").value;
+  var setvalue ='6';
+  document.getElementById("textbox").value = temp.concat(setvalue);
+});
+document.getElementById("7").addEventListener("click", function() 
+{
+  var temp = document.getElementById("textbox").value;
+  var setvalue ='7';
+  document.getElementById("textbox").value = temp.concat(setvalue);
+});
+
+document.getElementById("8").addEventListener("click", function() 
+{
+  var temp = document.getElementById("textbox").value;
+  var setvalue ='8';
+  document.getElementById("textbox").value = temp.concat(setvalue);
+});
+
+
+document.getElementById("0").addEventListener("click", function() 
+{
+  var temp = document.getElementById("textbox").value;
+  var setvalue ='0';
+  document.getElementById("textbox").value = temp.concat(setvalue);
+});
+
+document.getElementById("/").addEventListener("click",function()
+{
+a=document.getElementById("textbox").value;
+  op='/';
+  document.getElementById("textbox").value = "";
+});
+document.getElementById("+").addEventListener("click",function()
+{
+a=parseFloat(document.getElementById("textbox").value);
+  op='+';
+  erase();
+});
+document.getElementById("-").addEventListener("click",function()
+{
+a=document.getElementById("textbox").value;
+  op='-';
+  erase();
+});
+document.getElementById("*").addEventListener("click",function()
+{
+a=document.getElementById("textbox").value;
+  op='*';
+  erase();
+});
+
+document.getElementById("=").addEventListener("click",function()
+{
+b=document.getElementById("textbox").value;
+if(op=='/')
+{
+	if(b==0)
+	{
+	 alert("divider should not zero");
+erase();
+	}
+	else 
+	{
+document.getElementById("textbox").value = a/b;
+
+}
+}
+else if(op=='*')
+{
+document.getElementById("textbox").value = a*b;
+}
+else if(op=='-')
+{
+document.getElementById("textbox").value = a-b;
+}
+else if(op=='+')
+{
+document.getElementById("textbox").value = parseFloat(a)+parseFloat(b);
+}
+else if(op=='fact')
+FACT();
+else if(op=='pow')
+document.getElementById("textbox").value=a*a;
+else if(op=='log')
+document.getElementById("textbox").value=log(a);
+else if(op=='cube')
+	document.getElementById("textbox").value=a*a*a;
+else if(op=='int')
+	document.getElementById("textbox").value=Math.round(a);
+else if(op=='sin')
+	document.getElementById("textbox").value=Math.sin(a);
+else if(op=='cos')
+	document.getElementById("textbox").value=Math.cos(a);
+else if(op=='tan')
+	document.getElementById("textbox").value=Math.tan(a);
+else if(op=='exp')
+	document.getElementById("textbox").value=Math.exp(a);
+else if(op=='10^x')
+	document.getElementById("textbox").value=Math.pow(10,a);
+else if(op=='x^y')
+{
+	b=document.getElementById("textbox").value;
+	document.getElementById("textbox").value=Math.pow(a,b);
+}
+});
+document.getElementById("=1").addEventListener("click",function()
+{
+if(op=='kel')
+	document.getElementById("text1").value=parseFloat(a)+273.15;
+else if(op=='deg')
+	document.getElementById("text1").value=parseFloat(a)-273.15;	
+})
+function erase()
+{
+document.getElementById("textbox").value = "";
+}
+function erase1(){
+document.getElementById("text1").value = "";
+}
+function FACT()
+{ var i,f=1;
+  for(i=1;i<=a;i++)
+    f=f*i;
+  document.getElementById("textbox").value=f;
+}
+</script>
+</body>
+</html
